@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Roboto' ;
+    src: url('Roboto-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(90deg, #47fdb7 10%, #256cfa 99%);
+    flex-direction: column;
+    
+}
+
+header{
+    margin: 15px;
+    background: linear-gradient(left, #47fdb7 0%, #256cfa 99%);  
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-left: 65px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+
+nav ul li a{
+    color: #ffffffe6;
+    text-decoration: none;
+    font-size: 22px;
+    text-transform: uppercase;
+    transition: .2s;
+    display: block;
+    position: relative;
+    padding: 10px 10px;
+    margin-right: 40px;
+
+}
+
+nav ul:hover li a{
+    opacity: .3;
+}
+
+nav ul li a:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    background-color: #275ecc;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: .2s;
+}
+
+nav ul li a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform .2s;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 20%;
+    height: 50%;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 8px grey;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    width: 150px;
+    margin-bottom: 30px;
+
+}
+
+.formulario .tituloform{
+    font-size: 18px;
+    margin: 0px 40px 18px;
+    
+}
+
+.formulario form{
+    margin-left: 40px;
+}
+
+.formulario form input {
+    border: 1px solid #ecedec;
+    border-radius: 10px;
+    height: 35px;
+    display: flex;
+    padding-left: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.formulario form .info input{
+    width: 85%;
+    font-weight: 400;
+}
+
+.info input:focus-within {
+    border: 1.5px solid #2d79f3;
+}
+
+.input{
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.remember{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.remember div{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+}
+
+span{
+    font-size: 15px;
+    margin-right: 50px;
+    color: #2d79f3;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+button{
+    width: 85%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #151717;
+    color: white;
+    font-weight: 600;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+
+p{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1020px){
+    /*Cabeçalho*/
+
+    nav ul li{
+        padding: 20px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        margin-right: 40px;
+    
+    }
+
+    nav ul li a::before{
+        display: none;
+    }
+
+    img{
+        display: flex;
+        height: 15%;
+        width: 27%;
+    }
+
+    header{
+        margin: 15px;
+        background: linear-gradient(left, #47fdb7 0%, #256cfa 99%);  
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        margin-left: 65px;
+    }
+
+    nav ul li a{
+        font-size: 18px;
+        padding: 2px 10px 2px;
+        margin: 0; 
+
+    }
+
+    .formulario{
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        width: 90%;
+        height: 80%;
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: 0 0 8px grey;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
